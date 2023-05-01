@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <div className="flex-grow flex flex-col justify-center font-sharetech">
         <div className="border-b border-black py-6 text-center">
-          <p>select your connection method</p>
+         <ConnectWallet />
         </div>
         <div className="my-auto button-list flex flex-col justify-center gap-2 text-3xl">
           <button className="button ml-12 mr-12 mb-4 bg-primary border border-black text-black font-bold py-2 px-4">
@@ -21,7 +21,7 @@ export default function Home() {
             TRADE EMOTES
           </button>
           <button className="button ml-12 mr-12 mb-4 bg-gray border border-black text-black font-bold py-2 px-4">
-            CONNECT WALLET
+            VIEW EMOTES
           </button>
           <button className="button ml-12 mr-12 border border-black text-black font-bold py-2 px-4">
             PLAY BULL RUN
