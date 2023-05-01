@@ -21,7 +21,7 @@ export default function Home() {
             TRADE EMOTES
           </button>
           <button className="button ml-12 mr-12 mb-4 bg-gray border border-black text-black font-bold py-2 px-4">
-            CONNECT WALLET
+            VIEW EMOTES
           </button>
           <button className="button ml-12 mr-12 border border-black text-black font-bold py-2 px-4">
             PLAY BULL RUN
