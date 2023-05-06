@@ -14,16 +14,55 @@ export default function Home() {
          <ConnectWallet />
         </div>
         <div className="my-auto button-list flex flex-col justify-center gap-2 text-3xl">
-          <button className="button ml-12 mr-12 mb-4 bg-primary border border-black text-black font-bold py-2 px-4">
+          <button className="button 
+                             ml-12 
+                             mr-12 
+                             mb-4 
+                             bg-primary 
+                             border border-2 
+                             text-black 
+                             font-bold py-2 px-4 
+                             hover:text-primary 
+                             hover:border-l-4 
+                             hover:bg-white">
             BUY EMOTES
           </button>
-          <button className="button ml-12 mr-12 mb-4 bg-secondary border border-black text-white font-bold py-2 px-4">
+          <button className="button 
+                             ml-12 
+                             mr-12 
+                             mb-4 
+                             bg-secondary 
+                             border border-2
+                             text-white 
+                             font-bold py-2 px-4
+                             hover:text-secondary
+                             hover:border-l-4
+                             hover:bg-white">
             TRADE EMOTES
           </button>
-          <button className="button ml-12 mr-12 mb-4 bg-gray border border-black text-black font-bold py-2 px-4">
+          <button className="button 
+                             ml-12 
+                             mr-12 
+                             mb-4 
+                             bg-gray 
+                             border border-2 
+                             text-black 
+                             font-bold py-2 px-4
+                             hover:text-gray
+                             hover:border-l-4
+                             hover:bg-white">
             VIEW EMOTES
           </button>
-          <button className="button ml-12 mr-12 border border-black text-black font-bold py-2 px-4">
+          <button className="button 
+                             ml-12 
+                             mr-12 
+                             bg-white
+                             border border-2 
+                             text-black 
+                             font-bold py-2 px-4
+                             hover:text-black
+                             hover:border-l-4
+                             hover:bg-primary">
             PLAY BULL RUN
           </button>
         </div>
