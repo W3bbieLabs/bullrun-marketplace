@@ -15,10 +15,14 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      boxShadow: {
+        "bullShadow": "-2px 1px rgb(13,13,13)"
+      }, 
       colors: {
         primary: "#61C7A2",
         secondary: "#4881C5",
         gray: "#A0A0A0",
+        blk: "#131313",
       },
     },
   },
