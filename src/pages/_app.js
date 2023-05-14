@@ -1,11 +1,10 @@
 import "@/styles/globals.css";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-
-const activeChain = "theta";
+import { ThetaTestnet } from "@thirdweb-dev/chains";
 
 function App({ Component, pageProps }) {
   return (
-    <ThirdwebProvider activeChain={activeChain}>
+    <ThirdwebProvider activeChain={ThetaTestnet}>
       <Component {...pageProps} />
     </ThirdwebProvider>
   );
