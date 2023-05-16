@@ -1,10 +1,19 @@
 import "@/styles/globals.css";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-import { ThetaTestnet } from "@thirdweb-dev/chains";
+
+
 
 function App({ Component, pageProps }) {
   return (
-    <ThirdwebProvider activeChain={ThetaTestnet}>
+    <ThirdwebProvider activeChain= {{ chainId: 365,
+      rpc:["<https://eth-rpc-api-testnet.thetatoken.org/rpc]>"],
+      
+      nativeCurrency: {
+        decimals: 18,
+        name: "TFUEL",
+        symbol: "TFUEL",
+      },
+      }}>
       <Component {...pageProps} />
     </ThirdwebProvider>
   );

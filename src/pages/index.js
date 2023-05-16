@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { ConnectWallet } from "@thirdweb-dev/react";
+import Video from "@/components/video";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,6 +45,7 @@ export default function Home() {
           >
             TRADE EMOTES
           </button>
+          
           <ConnectWallet
             className="!important uppercase button 
                              ml-12 
@@ -56,6 +58,7 @@ export default function Home() {
                              hover:text-gray
                              hover:border-l-4
                              hover:bg-white text-3xl rounded-none text-center"
+                             
           />
           <button
             className="button 
@@ -71,6 +74,7 @@ export default function Home() {
           >
             PLAY BULL RUN
           </button>
+          <Video />
         </div>
         <div className="border-t border-black py-6 text-center">
           <p>bull run 1.0.0 c/o w3bbie</p>
