@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import Video from "@/components/video";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,6 +61,21 @@ export default function Home() {
                              hover:bg-white text-3xl rounded-none text-center"
                              
           />
+          <Link className="link 
+            ml-12 
+            mr-12 
+            mb-4 
+            bg-primary 
+            border-2 
+            text-black 
+            font-bold py-2 px-4 
+            hover:text-primary 
+            hover:border-l-4 
+            hover:bg-gray" href="/_leaderboard"> 
+            LEADERBOARD
+  
+</Link>
+
           <button
             className="button 
                              ml-12 
