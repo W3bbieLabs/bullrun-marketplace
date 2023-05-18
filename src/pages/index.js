@@ -49,6 +49,7 @@ export default function Home() {
           
           <ConnectWallet
             className="!important uppercase button 
+                             justify-center
                              ml-12 
                              mr-12 
                              mb-4 
