@@ -1,4 +1,5 @@
 import { useContract, useContractRead, Web3Button } from "@thirdweb-dev/react";
+import Link from "next/link";
 import React, { useState } from "react";
 
 
@@ -77,7 +78,22 @@ export default function LeaderBoard() {
       >
         Update LeaderBoard
       </Web3Button>
-
+    
+      <Link className="link 
+            ml-12 
+            mr-12 
+            mb-4 
+            bg-primary 
+            border-2 
+            text-black 
+            font-bold py-2 px-4 
+            hover:text-primary 
+            hover:border-l-4 
+            hover:bg-gray" href="/"> 
+            Home
+  
+</Link>
+      
 
 </div>
     </div>
