@@ -25,7 +25,7 @@ export default function LeaderBoard() {
         <div className="flex-grow flex flex-col justify-center font-sharetech">
     <div className="leaderboard">
       
-      <p className="leaders ml-12 mr-12 mb-4 bg-secondary border-2 text-white font-bold py-2 px-4 overflow-auto max-w-64 hover:text-secondary hover:border-l-4 hover:bg-white">
+      <p className="leaders ml-12 mr-12 mb-4 bg-secondary border-2 text-white font-bold py-2 px-4 overflow-auto max-w-64 hover:text-secondary hover:border-l-4 hover:bg-white text-center">
   Current Leaders: <b>{isLoading ? "Loading..." : displayLeaders.split(',').slice(0, 10).map((item, index) => (
     <React.Fragment key={item}>
       <div>
@@ -57,7 +57,7 @@ export default function LeaderBoard() {
         colorMode="light"
         accentColor="#F213A4"
       >
-        Set Your Score
+        1. Set Your Score
       </Web3Button>
 
       <Web3Button  className="!important uppercase button 
@@ -76,7 +76,7 @@ export default function LeaderBoard() {
         colorMode="light"
         accentColor="#F213A4"
       >
-        Update LeaderBoard
+        2. Update LeaderBoard
       </Web3Button>
     
       <Link className="link 

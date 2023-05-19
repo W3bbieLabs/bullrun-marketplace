@@ -100,7 +100,7 @@ function Video() {
    return (
     <>
     <div className='eggz'>
-        <p>Easter Egg Message Here</p>
+        <p>Purchase an EMOTE to unlock the Vid</p>
 
 
     </div>
