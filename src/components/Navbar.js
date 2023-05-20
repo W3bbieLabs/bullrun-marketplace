@@ -6,12 +6,6 @@ const Navbar = () => {
   const address = useAddress();
   const wallet = useWallet();
 
-  useEffect(() => {
-    if (address) {
-      console.log("address", address);
-    }
-  }, [address]);
-
   return (
     <nav className="border-top border-b border-black py-8">
       <div className="flex justify-between items-center px-4">

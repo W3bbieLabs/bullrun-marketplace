@@ -36,11 +36,7 @@ const Emote = () => {
 
   const { data } = useActiveClaimCondition(contract, token_id);
 
-  console.log(data);
-
   const { data: nft, isLoading, error } = useNFT(contract, token_id);
-
-  console.log(nft);
 
   const { mutate: claimNFT } = useClaimNFT(contract);
 
