@@ -1,7 +1,8 @@
 import { useContract, useContractRead, Web3Button } from "@thirdweb-dev/react";
 import Link from "next/link";
-import React, { useState } from "react";
-
+import React from "react";
+import TotalSupply from "../components/totalSupply";
+import ActiveClaim from "@/components/activeClaim";
 
 // Your smart contract address here
 const contractAddress = "0x26889fe63255f3f80EcDb78D3fb1f0Bc8861E3a1";
@@ -12,6 +13,9 @@ export default function LeaderBoard() {
     "0x26889fe63255f3f80EcDb78D3fb1f0Bc8861E3a1"
   );
 
+
+
+
   // Read the current leaders
   const { data: currentLeaders, isLoading } = useContractRead(
     contract,
@@ -19,6 +23,9 @@ export default function LeaderBoard() {
   );
 
   const displayLeaders = currentLeaders ? currentLeaders.toString() : "";
+
+ 
+
 
   return (
     <div className="flex flex-col h-screen">
@@ -36,6 +43,14 @@ export default function LeaderBoard() {
     </React.Fragment>
   ))}</b>
 </p>
+
+<div className="flex flex-grow flex-col ml-12 mr-12 mb-4 border border-black border-4 rounded-md py-4  text-center ">
+<p>BULLISH TOKEN STATS</p> <br>
+</br>
+<a><ActiveClaim /></a><br></br>
+<a>Total Supply:<TotalSupply /></a>
+
+</div>
 
 <div className="my-auto button-list flex flex-col justify-center gap-2 text-3xl">
 

@@ -14,7 +14,7 @@ function Video() {
    
    const isMismatched = useNetworkMismatch();
    const disconnectWallet = useDisconnect();
-   const edition = useContract("0xb4170B3d34Be5De483F0f385e40028C05Ee09a60", "edition").contract
+   const edition = useContract("0x59336Fd357f07a6501B2444556ae98633B741297", "edition").contract
    const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
    
    useEffect(() => {
