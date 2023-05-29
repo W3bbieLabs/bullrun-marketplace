@@ -5,10 +5,22 @@ import { ConnectWallet } from "@thirdweb-dev/react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Video from "@/components/video";
+import Modal from "@/components/Modal";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div className="flex flex-col h-screen font-sharetech">
       <Navbar />
@@ -26,9 +38,9 @@ export default function Home() {
               border-2 
               text-black 
               font-bold py-1 px-4 
-              hover:text-primary 
-              hover:border-l-4 
-              hover:bg-white"
+              lg:hover:text-primary 
+              lg:hover:border-l-4 
+              lg:hover:bg-white"
           >
             <Link href={"/emote/5"}>BUY EMOTES</Link>
           </button>
@@ -44,9 +56,9 @@ export default function Home() {
               border-black
               text-white 
               font-bold py-1 px-4
-              hover:text-secondary
-              hover:border-l-4
-              hover:bg-white"
+              lg:hover:text-secondary
+              lg:hover:border-l-4
+              lg:hover:bg-white"
           >
             TRADE EMOTES
           </button>
@@ -61,9 +73,9 @@ export default function Home() {
               border-2 
               border-solid text-black 
               font-bold py-1 px-4
-              hover:text-gray
-              hover:border-l-4
-              hover:bg-white text-2xl rounded-none text-center"
+              lg:hover:text-gray
+              lg:hover:border-l-4
+              lg:hover:bg-white text-2xl rounded-none text-center"
           />
           <button
             className="button 
@@ -74,9 +86,9 @@ export default function Home() {
             border-2 
             text-black 
             font-bold py-1 px-4 
-            hover:text-primary 
-            hover:border-l-4 
-            hover:bg-gray"
+            lg:hover:text-primary 
+            lg:hover:border-l-4 
+            lg:hover:bg-gray"
           >
             <Link href="/_leaderboard">LEADERBOARD</Link>
           </button>
@@ -85,19 +97,35 @@ export default function Home() {
             className="button 
               ml-12 
               mr-12 
+              mb-4
               bg-white
               border-2 
               text-black 
               font-bold py-1 px-4
-              hover:text-black
-              hover:border-l-4
-              hover:bg-primary "
+              lg:hover:text-black
+              lg:hover:border-l-4
+              lg:hover:bg-primary "
           >
             <Link href={"http://w3bbie.xyz/test/"} target="_blank">
               PLAY BULL RUN
             </Link>
           </button>
-          <Video />
+          <button
+            className="button 
+                             ml-12 
+                             mr-12 
+                             bg-white
+                             border-2 
+                             text-black 
+                             font-bold py-1 px-4
+                             lg:hover:text-black
+                             lg:hover:border-l-4
+                             lg:hover:bg-primary "
+            onClick={openModal}
+          >
+            VIDEO
+          </button>
+          {modalOpen && <Modal onClose={closeModal} component={Video} />}
         </div>
         <Footer />
       </div>
