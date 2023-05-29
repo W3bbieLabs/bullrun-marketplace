@@ -3,14 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .eggz {
-    text-align: center;
+  text-align: center;
+  color: white;
 }
 
 .link {
-    text-align: center;
+  text-align: center;
 }
 
-
-
+.css-1iyoj2o {
+  flex-direction: row !important;
+}
