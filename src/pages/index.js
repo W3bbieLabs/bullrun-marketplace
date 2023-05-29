@@ -124,7 +124,15 @@ export default function Home() {
           >
             VIDEO
           </button>
-          {modalOpen && <Modal onClose={closeModal} component={Video} />}
+          {modalOpen && (
+            <Modal
+              url={
+                "https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
+              }
+              onClose={closeModal}
+              component={Video}
+            />
+          )}
         </div>
         <Footer />
       </div>

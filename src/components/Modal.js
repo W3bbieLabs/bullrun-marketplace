@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const Modal = ({ onClose, component: Component }) => {
+const Modal = ({ onClose, url, component: Component }) => {
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const Modal = ({ onClose, component: Component }) => {
           </svg>
         </button>
         <div className="mt-4">
-          <Component />
+          <Component url={url} />
         </div>
       </div>
     </div>

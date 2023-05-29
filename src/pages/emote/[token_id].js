@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Footer from "@/components/Footer";
+import Modal from "@/components/Modal";
+import Video from "@/components/video";
 
 import {
   useActiveClaimCondition,
@@ -39,6 +41,16 @@ const Emote = () => {
   const { data: nft, isLoading, error } = useNFT(contract, token_id);
 
   const { mutate: claimNFT } = useClaimNFT(contract);
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   return (
     <div className="flex flex-col h-screen font-sharetech">
@@ -148,6 +160,22 @@ const Emote = () => {
         </div>
         <Footer />
       </div>
+      <div className="fixed flex flex-col -right-5 items-center bottom-64">
+        <button
+          className="bg-white p-1 text-black border border-black transform -rotate-90 w-16"
+          onClick={openModal}
+        >
+          VIEW
+        </button>
+        <img src="/logo.svg" className="w-8 mt-3" />
+      </div>
+      {modalOpen && (
+        <Modal
+          url={`https://ipfs.thirdwebcdn.com/ipfs/QmYPaBEM4WMc8H2pHbDTxrE2CsRLsFPB19tzeQXNNBVhtT/${token_id}.mp4`}
+          onClose={closeModal}
+          component={Video}
+        />
+      )}
     </div>
   );
 };

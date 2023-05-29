@@ -7,7 +7,7 @@ import {
 
 import { useState, useEffect } from "react";
 
-function Video() {
+function Video({ url }) {
   const address = useAddress();
 
   const isMismatched = useNetworkMismatch();
@@ -56,30 +56,48 @@ function Video() {
     );
   }
 
-  ///////***MEMBERS AREA *////////
-
-  if (hasClaimedNFT) {
-    return (
-      <div className="lg:h-screen lg:w-screen">
-        <iframe
-          src="https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
-          border="0"
-          width="100%"
-          height="100%"
-          allowfullscreen
-        />
-      </div>
-    );
+  if (
+    url ===
+    "https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
+  ) {
+    ///////***MEMBERS AREA *////////
+    if (hasClaimedNFT) {
+      return (
+        <div className="lg:h-screen lg:w-screen">
+          <iframe
+            //src="https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
+            src={url}
+            border="0"
+            width="100%"
+            height="100%"
+            allowfullscreen
+          />
+        </div>
+      );
+    }
+    ////***NON - MEMBERS AREA *//////
+    else {
+      return (
+        <>
+          <div className="eggz">
+            <p>Purchase an EMOTE to unlock the Vid</p>
+          </div>
+        </>
+      );
+    }
   }
 
-  ////***NON - MEMBERS AREA *//////
-
   return (
-    <>
-      <div className="eggz">
-        <p>Purchase an EMOTE to unlock the Vid</p>
-      </div>
-    </>
+    <div className="lg:h-screen lg:w-screen">
+      <iframe
+        //src="https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
+        src={url}
+        border="0"
+        width="100%"
+        height="100%"
+        allowfullscreen
+      />
+    </div>
   );
 }
 
