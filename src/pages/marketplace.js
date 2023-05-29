@@ -1,20 +1,41 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Video from "@/components/video";
 import Modal from "@/components/Modal";
 import { useState } from "react";
 
+import toast, { Toaster } from "react-hot-toast";
+
+const notify = (msg) =>
+  toast(msg, {
+    style: {
+      border: "1px solid #000000",
+      borderRadius: "0",
+      padding: "16px",
+      color: "#000000",
+    },
+    iconTheme: {
+      primary: "#ffffff",
+      secondary: "#000000",
+    },
+  });
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const address = useAddress();
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    setModalOpen(true);
+    if (!address) {
+      notify("Please connect your wallet to view content");
+    } else {
+      setModalOpen(true);
+    }
   };
 
   const closeModal = () => {
@@ -125,6 +146,7 @@ export default function Home() {
           >
             VIDEO
           </button>
+          <Toaster />
           {modalOpen && (
             <Modal
               url={

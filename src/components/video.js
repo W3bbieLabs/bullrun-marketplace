@@ -19,10 +19,6 @@ function Video({ url }) {
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
 
   useEffect(() => {
-    if (!address) {
-      return;
-    }
-
     const checkBalance = async () => {
       try {
         const nfts = await edition.getOwned(address);
@@ -35,26 +31,6 @@ function Video({ url }) {
   }, [address, edition]);
 
   //////**SIGN IN AREA */
-
-  if (!address) {
-    return (
-      <>
-        <div className="font-link">
-          <div className="eggz">
-            {address ? (
-              <>
-                {isMismatched}
-                <button onClick={disconnectWallet}>Disconnect Wallet</button>
-                <p>Your address: {address}</p>
-              </>
-            ) : (
-              <div className="connect"></div>
-            )}
-          </div>
-        </div>
-      </>
-    );
-  }
 
   if (
     url ===
@@ -96,6 +72,7 @@ function Video({ url }) {
         width="100%"
         height="100%"
         allowfullscreen
+        autoplay
       />
     </div>
   );
