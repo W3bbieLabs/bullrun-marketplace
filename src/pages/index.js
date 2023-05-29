@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
@@ -5,10 +6,21 @@ import { ConnectWallet } from "@thirdweb-dev/react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Video from "@/components/video";
+import Modal from "@/components/Modal";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div className="flex flex-col h-screen font-sharetech">
       <Navbar />
@@ -16,7 +28,7 @@ export default function Home() {
         <div className="border-b border-black py-6 text-center">
           <p>free markets serving bulls and bears</p>
         </div>
-        <div className="my-auto button-list flex flex-col justify-center gap-2 text-2xl">
+        <div className="my-auto button-list flex flex-col justify-center gap-2 text-2xl z-50">
           <button
             className="button 
                              ml-12 
@@ -85,7 +97,8 @@ export default function Home() {
           <button
             className="button 
                              ml-12 
-                             mr-12 
+                             mr-12
+                             mb-4 
                              bg-white
                              border-2 
                              text-black 
@@ -96,7 +109,22 @@ export default function Home() {
           >
             CREDITS
           </button>
-          <Video />
+          <button
+            className="button 
+                             ml-12 
+                             mr-12 
+                             bg-white
+                             border-2 
+                             text-black 
+                             font-bold py-1 px-4
+                             lg:hover:text-black
+                             hover:border-l-4
+                             lg:hover:bg-primary "
+            onClick={openModal}
+          >
+            VIDEO
+          </button>
+          {modalOpen && <Modal onClose={closeModal} component={Video} />}
         </div>
         <Footer />
       </div>
