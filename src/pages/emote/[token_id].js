@@ -91,9 +91,9 @@ const Emote = () => {
             border-2
             text-black
             font-bold py-1 px-4
-            hover:text-primary
-            hover:border-l-4
-            hover:bg-white"
+            lg:hover:text-primary
+            lg:hover:border-l-4
+            lg:hover:bg-white"
             onClick={() =>
               claimNFT({ to: address, quantity: 1, tokenId: token_id })
             }
@@ -110,11 +110,13 @@ const Emote = () => {
             border-black
             text-white 
             font-bold py-1 px-4
-            hover:text-secondary
-            hover:border-l-4
-            hover:bg-white"
+            lg:hover:text-secondary
+            lg:hover:border-l-4
+            lg:hover:bg-white"
           >
-            <Link href={""}>PLAY BULL RUN</Link>
+            <Link href={"https://w3bbie.xyz/test"} target="_blank">
+              PLAY BULL RUN
+            </Link>
           </button>
           <button
             className="button
@@ -124,9 +126,9 @@ const Emote = () => {
             border-2 
             border-solid text-black 
             font-bold py-1 px-4
-            hover:text-gray
-            hover:border-l-4
-            hover:bg-white"
+            lg:hover:text-gray
+            lg:hover:border-l-4
+            lg:hover:bg-white"
           >
             <Link href={"/marketplace"}>BACK TO MARKET</Link>
           </button>
@@ -137,9 +139,9 @@ const Emote = () => {
             border-2 
             text-black 
             font-bold py-1 px-4
-            hover:text-black
-            hover:border-l-4
-            hover:bg-primary"
+            lg:hover:text-black
+            lg:hover:border-l-4
+            lg:hover:bg-primary"
           >
             <Link href={"/"}>MAIN MENU</Link>
           </button>
