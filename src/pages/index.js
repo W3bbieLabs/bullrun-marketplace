@@ -63,7 +63,7 @@ export default function Home() {
                              hover:border-l-4 
                              hover:bg-white"
           >
-            <Link href={"http://w3bbie.xyz/test/"} target="_blank">
+            <Link href={"https://w3bbie.xyz/bullrun/"} target="_blank">
               START GAME
             </Link>
           </button>

@@ -127,7 +127,7 @@ export default function Home() {
               lg:hover:border-l-4
               lg:hover:bg-primary "
           >
-            <Link href={"http://w3bbie.xyz/test/"} target="_blank">
+            <Link href={"https://w3bbie.xyz/bullrun/"} target="_blank">
               PLAY BULL RUN
             </Link>
           </button>
