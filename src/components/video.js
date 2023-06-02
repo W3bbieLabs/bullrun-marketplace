@@ -4,14 +4,12 @@ import {
   useContract,
   useNetworkMismatch,
 } from "@thirdweb-dev/react";
-
 import { useState, useEffect } from "react";
 
 function Video({ url }) {
   const address = useAddress();
-
   const isMismatched = useNetworkMismatch();
-  const disconnectWallet = useDisconnect();
+
   const edition = useContract(
     "0x59336Fd357f07a6501B2444556ae98633B741297",
     "edition"
@@ -40,39 +38,27 @@ function Video({ url }) {
     if (hasClaimedNFT) {
       return (
         <div className="lg:h-screen lg:w-screen">
-          <iframe
-            //src="https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
-            src={url}
-            border="0"
-            width="100%"
-            height="100%"
-            allowfullscreen
-          />
+          <video controls width="100%" height="100%">
+            <source src={url} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       );
-    }
-    ////***NON - MEMBERS AREA *//////
-    else {
+    } else {
       return (
-        <>
-          <div className="eggz">
-            <p>Purchase an EMOTE to unlock the Vid</p>
-          </div>
-        </>
+        <div className="eggz">
+          <p>Purchase an EMOTE to unlock the Vid</p>
+        </div>
       );
     }
   }
 
   return (
-    <div className="lg:h-screen lg:w-screen z-50 cursor-pointer">
-      <iframe
-        //src="https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
-        src={url}
-        border="0"
-        width="100%"
-        height="100%"
-        allowfullscreen
-      />
+    <div className="z-50 cursor-pointer">
+      <video controls width="100%" height="100%">
+        <source src={url} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }
