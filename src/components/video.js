@@ -64,7 +64,7 @@ function Video({ url }) {
   }
 
   return (
-    <div className="lg:h-screen lg:w-screen">
+    <div className="h-screen w-screen">
       <iframe
         //src="https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
         src={url}
@@ -72,7 +72,6 @@ function Video({ url }) {
         width="100%"
         height="100%"
         allowfullscreen
-        autoplay
       />
     </div>
   );
