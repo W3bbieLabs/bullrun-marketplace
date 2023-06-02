@@ -68,7 +68,7 @@ const Emote = () => {
               <h1>🥷🏽ABILITIES INCLUDED</h1>
             </div>
           </div>
-          <div className="flex border-b text-2xl">
+          <div className="flex border-b text-2xl justify-center">
             <div className="w-[50%] py-3 border-r border-black">
               <h1>{`${parseInt(data?.price?._hex) / 1000000000000000000}`}</h1>
             </div>
