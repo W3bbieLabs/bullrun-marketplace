@@ -149,7 +149,7 @@ export default function Home() {
           {modalOpen && (
             <Modal
               url={
-                "https://player.thetavideoapi.com/video/video_gshi0kmd6qipqwsvzmwdt7nen9"
+                "https://player.thetavideoapi.com/video/video_81ve1vbm7k6pq17n9d6bw0m1h9"
               }
               onClose={closeModal}
               component={Video}
