@@ -128,7 +128,7 @@ export default function Home() {
                              hover:border-l-4
                              hover:bg-primary "
           >
-            CREDITS
+            <Link href={"/credits"}>CREDITS</Link>
           </button>
           <button
             className="button 
